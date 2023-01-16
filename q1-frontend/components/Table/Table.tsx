@@ -68,12 +68,12 @@ export default function Table() {
           ))}
         </div>
         {contents.rowContents.map((content) => (
-          <div data-testid='row' className={styles.row}>
+          <div data-testid='row' className={styles.row} key={content.alert}>
             <div className={styles.item}>{content.alert}</div>
             <div className={styles.item}>{content.status}</div>
             <div className={styles.item}>
               {content.updates.map((update) => (
-                <div className={styles.updates}>
+                <div className={styles.updates} key={update.update}>
                   <div className={styles.item}>{update.update}</div>
                   <div className={styles.date}>{update.date}</div>
                 </div>
